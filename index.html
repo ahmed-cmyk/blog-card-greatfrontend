@@ -12,27 +12,40 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Tailwind CDN allows you to use Tailwind classes immediately in your HTML without any installation steps. 
-      If you're not using Tailwind, you may delete the <script> -->
-    <!-- Get started on Tailwind: https://tailwindcss.com/docs/installation/play-cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="icon" href="img/favicon.ico" sizes="any" />
+<link rel="icon" href="img/favicon.ico" sizes="any" />
     <style>
       /* You may write styles inside this <style> tag or within `css/style.css`. */
     </style>
   </head>
   <body>
-    <!-- Add your site or application content here -->
-    <h1 class="text-5xl text-center font-semibold pt-20">
-      Hello world! Write your content here.
-    </h1>
+    <article class="blog-card" aria-labelledby="blog-title">
+      <header>
+        <img 
+          src="img/spacejoy-unsplash.webp" 
+          alt="An image of a living room" 
+          class="blog-card__image" 
+        />
+        <p class="blog-card__badge" aria-label="Category: Interior">Interior</p>
+      </header>
 
-    <!-- Interior
-      Top 5 Living Room Inspirations
-      Curated vibrants colors for your living, make it pop & calm in the same time.
-      Read more -->
+      <div class="blog-card__body">
+        <h2 class="blog-card__title">
+          <a href="#" class="blog-card__title-link" id="blog-title">
+            Top 5 Living Room Inspirations
+          </a>
+        </h2>
+
+        <p class="blog-card__description">
+          Curated vibrant colors for your living, make it pop & calm at the same time.
+        </p>
+
+        <footer>
+          <a href="#" class="blog-card__link" aria-label="Read more about Top 5 Living Room Inspirations">
+            Read more <span class="arrow">&#8594;</span>
+          </a>
+        </footer>
+      </div>
+    </article>
 
     <!-- Attribute this challenge to yourself! -->
     <div class="credits" data-gfe-screenshot-exclude="true">
@@ -43,9 +56,9 @@
         >GreatFrontEnd Projects</a
       >. Built by
       <a
-        href="https://www.greatfrontend.com/projects/u/username"
+        href="https://www.greatfrontend.com/projects/u/ikramahmed398"
         target="_blank"
-        >Your Name</a
+        >Ahmed Ikram</a
       >.
     </div>
     <script src="js/index.js"></script>

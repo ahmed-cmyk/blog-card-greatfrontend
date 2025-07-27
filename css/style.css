@@ -1,15 +1,173 @@
-/* Put any custom CSS styles here.  */
-/* Be sure to delete the <style> tag in index.html if you want to use this stylesheet. */
+:root {
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* Font Sizes + Line Heights */
+  --font-size-xs: 12px;
+  --line-height-xs: 16px;
+
+  --font-size-sm: 14px;
+  --line-height-sm: 20px;
+
+  --font-size-base: 16px;
+  --line-height-base: 24px;
+
+  --font-size-lg: 18px;
+  --line-height-lg: 28px;
+
+  --font-size-xl: 20px;
+  --line-height-xl: 28px;
+
+  --font-size-2xl: 24px;
+  --line-height-2xl: 32px;
+
+  --font-size-3xl: 30px;
+  --line-height-3xl: 36px;
+
+  --font-size-4xl: 36px;
+  --line-height-4xl: 40px;
+
+  --font-size-5xl: 48px;
+  --line-height-5xl: 48px;
+
+  --font-size-6xl: 60px;
+  --line-height-6xl: 60px;
+
+  /* ========== TEXT COLORS ========== */
+  --color-text-primary: #171717;
+  --color-text-primary-hover: #0a0a0a;
+  --color-text-primary-invert: #ffffff;
+  --color-text-secondary: #525252;
+  --color-text-tertiary: #737373;
+  --color-text-brand: #4338ca;
+  --color-text-disabled: #a3a3a3;
+  --color-text-error: #dc2626;
+  --color-text-error-emphasize: #991b1b;
+  --color-text-success: #15803d;
+  --color-text-warning: #a16207;
+
+  /* ========== BACKGROUND COLORS ========== */
+  --color-bg-primary: #ffffff;
+  --color-bg-primary-inverted: #0a0a0a;
+  --color-bg-primary-hover: #fafafa;
+  --color-bg-secondary: #e5e7eb;
+  --color-bg-secondary-hover: #d1d5db;
+  --color-bg-tertiary: #fafafa;
+  --color-bg-disabled: #f5f5f5;
+  --color-bg-disabled-emphasize: #f3f4f6;
+  --color-bg-brand-primary: #4338ca;
+  --color-bg-brand-primary-emphasize: #3730a3;
+  --color-bg-error: #dc2626;
+  --color-bg-error-emphasize: #b91c1c;
+  --color-bg-error-subtle: #fef2f2;
+  --color-bg-success-subtle: #f0fdf4;
+  --color-bg-brand-subtle: #eef2ff;
+  --color-bg-neutral-subtle: #f9fafb;
+  --color-bg-warning-subtle: #fffbeb;
+
+  /* ========== BORDER / RING COLORS ========== */
+  --color-border-primary: #e5e5e5;
+  --color-border-secondary: #9ca3af;
+  --color-border-success: #bbf7d0;
+  --color-border-brand-solid: #4f46e5;
+  --color-border-brand-subtle: #c7d2fe;
+  --color-border-error-subtle: #fecaca;
+  --color-border-warning-subtle: #fde68a;
+
+  /* ========== ICON COLORS ========== */
+  --color-icon-emphasize: #404040;
+  --color-icon-primary: #a3a3a3;
+  --color-icon-primary-hover: #737373;
+  --color-icon-brand: #6366f1;
+  --color-icon-brand-bg: #eef2ff;
+  --color-icon-success: #15803d;
+  --color-icon-error: #dc2626;
+  --color-icon-warning: #facc15;
+
+  /* ========== FORM / INPUT COLORS ========== */
+  --color-input-text-title: #404040;
+  --color-input-text-placeholder: #737373;
+  --color-input-text-hint: #737373;
+  --color-input-text-filled: #171717;
+  --color-input-text-disabled: #a3a3a3;
+  --color-input-text-error: #dc2626;
+  --color-input-bg: #fafafa;
+  --color-input-border: #e5e5e5;
+}
+
 body {
   margin: 0;
   font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   min-height: 100vh;
+  background-color: var(--color-bg-secondary);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+.blog-card {
+  background-color: var(--color-bg-neutral-subtle);
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 150px;
+  max-width: 340px;
+  width: 100%;
+}
+
+.blog-card__image {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: block;
+  max-height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.blog-card__badge {
+  background-color: var(--color-bg-success-subtle);
+  border: 1px solid var(--color-border-success);
+  border-radius: 14px;
+  color: var(--color-text-success);
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  padding: 2px 5px;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.blog-card__body {
+  padding: 10px;
+}
+
+.blog-card__title {
+  margin: 0;
+}
+
+.blog-card__title a {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+}
+
+.blog-card__link {
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+
+.blog-card__link:hover,
+.blog-card__link:focus {
+  text-decoration: underline; 
+}
+
+footer {
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 * {
