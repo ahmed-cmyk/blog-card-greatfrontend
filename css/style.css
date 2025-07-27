@@ -165,6 +165,22 @@ body {
   text-decoration: underline; 
 }
 
+.container {
+  min-height: 812px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    min-height: 1440px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    min-height: 768px;
+  }
+}
+
 footer {
   margin-top: 30px;
   margin-bottom: 10px;
